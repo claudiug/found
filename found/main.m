@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 int main(int argc, const char * argv[])
 {
@@ -51,6 +52,11 @@ int main(int argc, const char * argv[])
             NSLog(@"dump: %@", d);
         }
         
+        Person *person1 = [[Person alloc] init];
+        [person1 setKilos:34];
+        [person1  setHeightInMeters:34.2];
+        person1.kilos = 300; //the same as line 58
+        NSLog(@"person: %f", person1.bodyMassIndex);
     }
     return 0;
 }
