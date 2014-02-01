@@ -24,7 +24,10 @@ int main(int argc, const char * argv[])
         NSCalendar *cal = [NSCalendar currentCalendar];
         NSLog(@"calendar; %@", [cal calendarIdentifier]);
         NSLog(@"calendar; %lu", (unsigned long)[cal ordinalityOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:time]);
-
+        NSDate *stuff = [[NSDate alloc] init];
+        NSLog(@"here %f", [stuff timeIntervalSinceNow]);
+        NSArray *arr = nil;
+        NSLog(@"array: %@", [arr lastObject]);
     }
     return 0;
 }
