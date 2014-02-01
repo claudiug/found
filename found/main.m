@@ -28,6 +28,16 @@ int main(int argc, const char * argv[])
         NSLog(@"here %f", [stuff timeIntervalSinceNow]);
         NSArray *arr = nil;
         NSLog(@"array: %@", [arr lastObject]);
+        NSDate *expiration;
+        NSLog(@"exp: %@", expiration);
+        NSDateComponents *components = [[NSDateComponents alloc] init ];
+        [components setWeekOfYear:1984];
+        [components setWeek:20];
+        [components setDay:2];
+        //NSCalendar *c = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSCalendar *c = [NSCalendar currentCalendar];
+        NSDate *bdate = [c dateFromComponents:components];
+        NSLog(@"date %@", bdate);
     }
     return 0;
 }
