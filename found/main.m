@@ -38,6 +38,19 @@ int main(int argc, const char * argv[])
         NSCalendar *c = [NSCalendar currentCalendar];
         NSDate *bdate = [c dateFromComponents:components];
         NSLog(@"date %@", bdate);
+        NSString *nameIs = @"this is james may";
+        NSLog(@"dump %@", nameIs);
+        NSLog(@"len: %i", (int)[nameIs length]);
+        //array
+        NSDate *here = [NSDate date];
+        NSDate *tomorrow = [here dateByAddingTimeInterval:24.0*60.0*60.0];
+        NSDate *yesterday = [now dateByAddingTimeInterval:24.0*60.0*60.0];
+        NSArray *dump = @[here, tomorrow, yesterday];
+        NSLog(@"dump %@", dump[1]);
+        for (NSDate *d in dump) {
+            NSLog(@"dump: %@", d);
+        }
+        
     }
     return 0;
 }
